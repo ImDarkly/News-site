@@ -16,9 +16,9 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
             <p class="small-title">welcome to</p>
             <p class="logo">Title</p>
         </div>
-        <div class="google-button" id="background"><a href="..."></a>Continue with Google</div>
+        <div class="google-button" id="background"><a href="#"></a>Continue with Google</div>
         <div class="email" id="hide-button" onclick="changeclass()"><button class="email-button" >Continue with email</button></div>
-        <div class="guest-button"><a href="news.html">Continue as guest</a></div>
+        <div class="guest-button"><a href="#">Continue as guest</a></div>
     </div>
     <div id="form" class="hide">
         <div class="form-arrow" id="back-button"  onclick="changeclass2()"><button class="form-arrow"><i class="fas fa-arrow-left"></i></button></i></div>
@@ -66,6 +66,50 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
         
         NAME.className="show"
         }
+    </script>
+    <script>
+        let box = document.getElementById('form'),
+            btn = document.getElementById('hide-button');
+
+btn.addEventListener('click', function changeclass() {
+  
+  if (box.classList.contains('hide')) {
+    box.classList.remove('hide');
+    setTimeout(function () {
+      box.classList.remove('form');
+    }, 20);
+  } else {
+    box.classList.add('form');    
+    box.addEventListener('transitionend', function(e) {
+      box.classList.add('hide');
+    }, {
+      capture: false,
+      once: true,
+      passive: false
+    });
+  }
+  
+}, false);
+
+    </script>
+    <script>
+      const buttons = document.querySelectorAll('a');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          
+          let x = e.clientX - e.target.offsetLeft;
+          let y = e.clientX - e.target.offsetTop;
+
+          let ripples = document.createElement('span');
+          ripples.style.left = x + 'px';
+          ripples.style.top= y + 'px';
+          this.appendChild(ripples);
+
+          setTimeout( () => {
+            ripples.remove()
+          },1000)
+        })
+      })
     </script>
 </body>
 </html>
