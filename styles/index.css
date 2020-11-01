@@ -126,7 +126,7 @@ span{
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     border-radius: 30px;
     font-family: 'Roboto', sans-serif;
-    transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0s, opacity 0.5s scale;
 }
 .show{
     opacity: 1;
