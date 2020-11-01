@@ -67,5 +67,30 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
         NAME.className="show"
         }
     </script>
+    <script>
+        let box = document.getElementById('form'),
+            btn = document.getElementById('hide-button');
+
+btn.addEventListener('click', function changeclass() {
+  
+  if (box.classList.contains('hide')) {
+    box.classList.remove('hide');
+    setTimeout(function () {
+      box.classList.remove('form');
+    }, 20);
+  } else {
+    box.classList.add('form');    
+    box.addEventListener('transitionend', function(e) {
+      box.classList.add('hide');
+    }, {
+      capture: false,
+      once: true,
+      passive: false
+    });
+  }
+  
+}, false);
+
+    </script>
 </body>
 </html>
