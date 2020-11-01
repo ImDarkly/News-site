@@ -21,6 +21,8 @@ body{
     font-weight: 900;
     font-size: 18px;
     color: rgba(218, 220, 222, 0.75);
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s linear;
 }
 .logo{
     font-size: 96px;
@@ -106,8 +108,7 @@ span{
     -webkit-tap-highlight-color: transparent;
 }
 .hide{
-    visibility: hidden;
-    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
 }
 
 .blur{
@@ -121,7 +122,7 @@ span{
     height: 524px;
     top: 50%;
     left: 45%;
-    transform: scale(0.8) translate(-44%, -50%);
+    transform: translate(-44%, -50%);
     background: #202D3D;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     border-radius: 30px;
