@@ -21,8 +21,6 @@ body{
     font-weight: 900;
     font-size: 18px;
     color: rgba(218, 220, 222, 0.75);
-    opacity: 1;
-    transition: visibility 0s, opacity 0.5s linear;
 }
 .logo{
     font-size: 96px;
@@ -31,8 +29,9 @@ body{
 .small-title{
     margin: 0px;
 }
+
 .google-button{
-    top: 80%;
+    top: 75%;
     left: 45%;
     position: absolute;
     transform: translate(-44%, -50%);
@@ -46,9 +45,16 @@ body{
     width: 85%;
     padding: 10px;
     border-radius: 50px;
+    overflow: hidden;
+}
+.google-button a{
+    text-decoration: none;
+    color:  #1D0B3B;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 .email-button{
-    top: 90%;
+    top: 85%;
     left: 45%;
     position: absolute;
     transform: translate(-44%, -50%);
@@ -64,30 +70,12 @@ body{
     padding: 10px;
     border-radius: 50px;
     outline: none;
-}
-span{
-    position: absolute;
-    background: #fff;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    border-radius: 50%;
-    animation:  animate 1s linear infinite;
-}
-@keyframes animate{
-    0%
-    {
-        width: 0px;
-        height: 0px;
-        opacity: 0.5;
-    }
-    100%{
-        width: 500px;
-        height: 500px;
-        opacity: 0;
-    }
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 .guest-button{
-    top: 100%;
+    top: 95%;
     left: 45%;
     position: absolute;
     transform: translate(-40%, -50%);
@@ -108,7 +96,8 @@ span{
     -webkit-tap-highlight-color: transparent;
 }
 .hide{
-    transition: visibility 0s, opacity 0.5s linear;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .blur{
@@ -140,6 +129,7 @@ span{
     background: transparent;
     border: none;
     outline: none;
+    margin-top: 0px;
 }
 .profile-logo{
     color:  #DADCDE;
@@ -240,22 +230,4 @@ hr{
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
     padding-left: 3px;
-}
-.ripple {
-
-  background-position: center;
-  transition: background 0.8s;
-}
-
-.ripple:hover{
-  background-color: #47a7f5;
-  background-image: radial-gradient(circle,transparent 1%,#47a7f5 1%);
-  background-position: center;
-  background-size: 15000%;
-}
-
-.ripple:active{
-  transition: background 0s;
-  background-color: #6eb9f7;
-  background-size: 100%;
 }
