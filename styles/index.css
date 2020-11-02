@@ -110,7 +110,7 @@ body{
     opacity: 1;
     transition: visibility 0s, opacity 0.5s linear;
 }
-.form-arrow{
+.form .form-arrow{
     color:  #DADCDE;
     margin: 20px 10px;
     font-size: 36px;
