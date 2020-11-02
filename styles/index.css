@@ -29,7 +29,6 @@ body{
 .small-title{
     margin: 0px;
 }
-
 .google-button{
     top: 75%;
     left: 45%;
@@ -45,13 +44,6 @@ body{
     width: 85%;
     padding: 10px;
     border-radius: 50px;
-    overflow: hidden;
-}
-.google-button a{
-    text-decoration: none;
-    color:  #1D0B3B;
-    outline: none;
-    -webkit-tap-highlight-color: transparent;
 }
 .email-button{
     top: 85%;
@@ -70,9 +62,6 @@ body{
     padding: 10px;
     border-radius: 50px;
     outline: none;
-    overflow: hidden;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
 }
 .guest-button{
     top: 95%;
@@ -87,7 +76,6 @@ body{
     background: none;
     outline: none;
     border: none;
-    overflow: hidden;
 }
 .guest-button a{
     text-decoration: none;
@@ -122,14 +110,13 @@ body{
     opacity: 1;
     transition: visibility 0s, opacity 0.5s linear;
 }
-.form-arrow{
+.form .form-arrow{
     color:  #DADCDE;
     margin: 20px 10px;
     font-size: 36px;
     background: transparent;
     border: none;
     outline: none;
-    margin-top: 0px;
 }
 .profile-logo{
     color:  #DADCDE;
