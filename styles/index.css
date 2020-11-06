@@ -41,9 +41,20 @@ body{
     font-size: 18px;
     color: #1D0B3B;
     background-color: #DADCDE;
-    width: 85%;
+    width: 90%;
     padding: 10px;
     border-radius: 50px;
+    outline: none;
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+
+}
+.google-button a{
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 }
 .email-button{
     top: 85%;
@@ -62,12 +73,15 @@ body{
     padding: 10px;
     border-radius: 50px;
     outline: none;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 .guest-button{
     top: 95%;
     left: 45%;
     position: absolute;
-    transform: translate(-40%, -50%);
+    transform: translate(-45%, -50%);
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -76,6 +90,11 @@ body{
     background: none;
     outline: none;
     border: none;
+    width: 90%;
+    padding: 10px;
+    border-radius: 50px;
+    outline: none;
+    overflow: hidden;
 }
 .guest-button a{
     text-decoration: none;
@@ -217,4 +236,64 @@ hr{
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
     padding-left: 3px;
+}
+span.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 600ms linear;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  @keyframes ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+  #pane {
+    position: fixed;
+	width: 45%;
+	height: 45%;
+	top: 90%;
+	left: 20%;
+	
+	
+	margin: 0;
+	padding: 0;
+	z-index: 99;
+	border-radius: 25px 25px 0px 0px;
+	background: #202D3D;
+}
+
+#title {
+	font-family: monospace;
+	background: #202D3D;
+    box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px 25px 0px 0px;
+	color: white;
+	font-size: 24px;
+	height: 30px;
+	text-align: center;
+}
+
+#ghostpane {
+	background: #999;
+	opacity: 0.2;
+
+	width: 45%;
+	height: 45%;
+	top: 20%;
+	left: 20%;
+	
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	z-index: 98;
+
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	-ms-transition: all 0.25s ease-in-out;
+	-o-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
 }
