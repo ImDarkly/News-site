@@ -26,12 +26,17 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
         <div class="profile-logo"><i class="far fa-user-circle"></i></div>
         <div class="welcome"><p>Welcome back!</p></div>
         <div class="information"><p>Login into our existing DarkLy account</p></div>
-        <div class="username"><input type="text" class="username" placeholder="Username"></div>
-        <div class="username-profile"><i class="far fa-user"></i></div>
-        <hr>
-        <div class="password"><input type="text" class="password" placeholder="Password"></div>
-        <div class="key"><i class="fas fa-key"></i></div>
-        <hr>
+        <div class="username">
+          <div class="input-animated" autocomplete="off">
+            <input autocomplete="off" type="text" id="name" required pattern="\S+.*" placeholder="the placeholder"/>
+            <label htmlFor="name" class="label-name"><span class="content-name">Name</span></label>
+        </div>
+          <div class="input-animated" autocomplete="off">
+          <input autocomplete="off" type="text" id="name" required pattern="\S+.*" placeholder="the placeholder"/>
+          <label htmlFor="name" class="label-name"><span class="content-name">Password</span></label>  
+        </div>
+      </div>
+      
         <div class="login-button"><a href="feed.html">Login</a></div>
         <div class="form-foot"><p>Don’t have account?<a href="index.html">Sign up</a></p></div>
     </div>
