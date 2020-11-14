@@ -22,10 +22,10 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
           <span></span>
           <button class="ripple"></button>
         </div>
-          <li>Home</li>
-          <li>Profile</li>
-          <li>News</li>
-          <li>About</li>
+          <li><button>Home</button></li>
+          <li><button>About</button></li>
+          <li><button>Profile</button></li>
+          <li><button>Chat</button></li>
       </ul>
     </div>
   </nav>
@@ -83,7 +83,32 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
       <div class="card-description">This illustration shows the hot, dense, expanding cloud of debris stripped from neutron stars just before they collided.</div>
   </div>
 
+  <script>
+    var buttons = document.getElementsByTagName('button');
+
+Array.prototype.forEach.call(buttons, function(b){
+  b.addEventListener('click', createRipple);
+})
+
+function createRipple(e)
+{
+  if(this.getElementsByClassName('ripple').length > 0)
+    {
+      this.removeChild(this.childNodes[1]);
+    }
   
+  var circle = document.createElement('div');
+  this.appendChild(circle);
+  
+  var d = Math.max(this.clientWidth, this.clientHeight);
+  circle.style.width = circle.style.height = d + 'px';
+  
+  circle.style.left = e.clientX - this.offsetLeft - d / 2 + 'px';
+  circle.style.top = e.clientY - this.offsetTop - d / 2 + 'px';
+  
+  circle.classList.add('ripple');
+}
+  </script>
   
   <script>
     function save() {
