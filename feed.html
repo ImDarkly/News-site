@@ -18,6 +18,7 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
           <span></span>
           <span></span>
           <span></span>
+          <button class="ripple"></button>
         </div>
           <li>Home</li>
           <li>Profile</li>
@@ -26,6 +27,71 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
       </ul>
     </div>
   </nav>
+  <div class="under-nav"></div>
+  <div class="feed-title">News</div>
+  <div class="card">
+    <div class="card-image">
+      <img src="https://picsum.photos/400/400" alt="" >
+    </div>
+    <div class="settings-button"><button class="ripple"><i class="fas fa-ellipsis-v"></i></button></i></div>
+    <div class="save-button"><button class="ripple" onclick="save()"><i class="far fa-bookmark"></i></button></div>
+    <div class="solid-save"  id="solid"><button class="ripple"><i class="fas fa-bookmark"></i></button></div>
+    <div class="card-title">Nasa</div>
+      <div class="comment-button"><button  class="ripple"><i class="far fa-comment"></i></button></div>
+      <div class="like-button"><button><i class="far fa-heart"></i></button></div>
+      <div class="card-description">This illustration shows the hot, dense, expanding cloud of debris stripped from neutron stars just before they collided.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-image">
+      <img src="https://picsum.photos/600/400" alt="" >
+    </div>
+    <div class="settings-button"><button class="ripple"><i class="fas fa-ellipsis-v"></i></button></i></div>
+    <div class="save-button"><button class="ripple" onclick="save()"><i class="far fa-bookmark"></i></button></div>
+    <div class="solid-save"  id="solid"><button class="ripple"><i class="fas fa-bookmark"></i></button></div>
+    <div class="card-title">Nasa</div>
+      <div class="comment-button"><button  class="ripple"><i class="far fa-comment"></i></button></div>
+      <div class="like-button"><button><i class="far fa-heart"></i></button></div>
+      <div class="card-description">This illustration shows the hot, dense, expanding cloud of debris stripped from neutron stars just before they collided.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-image">
+      <img src="https://picsum.photos/400/600" alt="" >
+    </div>
+    <div class="settings-button"><button class="ripple"><i class="fas fa-ellipsis-v"></i></button></i></div>
+    <div class="save-button"><button class="ripple" onclick="save()"><i class="far fa-bookmark"></i></button></div>
+    <div class="solid-save"  id="solid"><button class="ripple"><i class="fas fa-bookmark"></i></button></div>
+    <div class="card-title">Nasa</div>
+      <div class="comment-button"><button  class="ripple"><i class="far fa-comment"></i></button></div>
+      <div class="like-button"><button><i class="far fa-heart"></i></button></div>
+      <div class="card-description">This illustration shows the hot, dense, expanding cloud of debris stripped from neutron stars just before they collided.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-image">
+      <img src="https://picsum.photos/600/600" alt="" >
+    </div>
+    <div class="settings-button"><button class="ripple"><i class="fas fa-ellipsis-v"></i></button></i></div>
+    <div class="save-button"><button class="ripple" onclick="save()"><i class="far fa-bookmark"></i></button></div>
+    <div class="solid-save"  id="solid"><button class="ripple"><i class="fas fa-bookmark"></i></button></div>
+    <div class="card-title">Nasa</div>
+      <div class="comment-button"><button  class="ripple"><i class="far fa-comment"></i></button></div>
+      <div class="like-button"><button><i class="far fa-heart"></i></button></div>
+      <div class="card-description">This illustration shows the hot, dense, expanding cloud of debris stripped from neutron stars just before they collided.</div>
+  </div>
+
+  
+  
+  <script>
+    function save() {
+    
+    var NAME = document.getElementById("solid")
+    
+    NAME.className="solid-save-show"
+    } 
+</script>
+
   <script>
     menu = $("nav ul");
 toggle = $("nav ul .menu");
@@ -38,5 +104,7 @@ toggle.on("click", function() {
     }
 });
   </script>
+  
+  
 </body>
 </html>
