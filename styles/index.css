@@ -136,6 +136,7 @@ body{
     background: transparent;
     border: none;
     outline: none;
+    z-index: 2;
 }
 .profile-logo{
     color:  #DADCDE;
@@ -251,52 +252,7 @@ span.ripple {
       opacity: 0;
     }
   }
-  #pane {
-    position: fixed;
-	width: 45%;
-	height: 45%;
-	top: 90%;
-	left: 20%;
-	
-	
-	margin: 0;
-	padding: 0;
-	z-index: 99;
-	border-radius: 25px 25px 0px 0px;
-	background: #202D3D;
-}
 
-#title {
-	font-family: monospace;
-	background: #202D3D;
-    box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 25px 25px 0px 0px;
-	color: #DADCDE;
-	font-size: 24px;
-	height: 30px;
-	text-align: center;
-}
-
-#ghostpane {
-	background: #999;
-	opacity: 0.2;
-
-	width: 45%;
-	height: 45%;
-	top: 20%;
-	left: 20%;
-	
-	position: absolute;
-	margin: 0;
-	padding: 0;
-	z-index: 98;
-
-	-webkit-transition: all 0.25s ease-in-out;
-	-moz-transition: all 0.25s ease-in-out;
-	-ms-transition: all 0.25s ease-in-out;
-	-o-transition: all 0.25s ease-in-out;
-	transition: all 0.25s ease-in-out;
-}
 /* "input-animated" class refers to input where text moves/changes on focus */
     
     .form {

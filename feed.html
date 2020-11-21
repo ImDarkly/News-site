@@ -11,10 +11,11 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
     <script src="script/jquery-3.5.1.js"></script>
 </head>
 <body id="body">
+  <div class="hide" id="blur"></div>
   <nav>
     <div class="menu-top">
       <div class="nav-title">Site</div>
-      <div class="nav-profile"><button class="ripple"><i class="fas fa-user-circle"></i></button></div>
+      <div class="nav-profile"><button class="ripple" onclick="profile()"><i class="fas fa-user-circle"></i></button></div>
       <ul>
         <div class="menu">
           <span></span>
@@ -31,6 +32,9 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
   </nav>
   <div class="under-nav"></div>
   <div class="feed-title">News</div>
+  <div class="hide" id="profile-block-hide">
+    <div class="form-arrow" id="back-button"  onclick="back()"><button><i class="fas fa-arrow-left"></i></button></i></div>
+  </div>
   <div class="card">
     <div class="card-image">
       <img src="https://picsum.photos/400/400" alt="" >
@@ -111,12 +115,37 @@ function createRipple(e)
   </script>
   
   <script>
-    function save() {
+    function profile() {
     
-    var NAME = document.getElementById("solid")
+    var NAME = document.getElementById("profile-block-hide")
     
-    NAME.className="solid-save-show"
+    NAME.className="profile-block-show"
+
+    var NAME = document.getElementById("blur")
+    
+    NAME.className="blur"
+
+    var NAME = document.getElementById("body")
+    
+    NAME.className="fixed"
     } 
+</script>
+
+<script>
+  function back() {
+  
+  var NAME = document.getElementById("profile-block-hide")
+  
+  NAME.className="hide"
+  var NAME = document.getElementById("blur")
+    
+  NAME.className="hide"
+
+  var NAME = document.getElementById("body")
+    
+  NAME.className="body"
+
+  } 
 </script>
 
   <script>
