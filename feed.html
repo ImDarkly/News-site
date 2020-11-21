@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
 integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/feed.css">
-    </script>
     <script src="script/jquery-3.5.1.js"></script>
 </head>
 <body id="body">
@@ -15,7 +14,10 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
   <nav>
     <div class="menu-top">
       <div class="nav-title">Site</div>
-      <div class="nav-profile"><button class="ripple" onclick="profile()"><i class="fas fa-user-circle"></i></button></div>
+      <div class="nav-profile" id="anim"><button class="ripple" onclick="profile()">
+      <span class="round"></span>
+      <span class="elipse"></span>
+      </button></div>
       <ul>
         <div class="menu">
           <span></span>
@@ -23,17 +25,17 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
           <span></span>
           <button class="ripple"></button>
         </div>
-          <li><button>Home</button></li>
-          <li><button>About</button></li>
-          <li><button>Profile</button></li>
-          <li><button>Chat</button></li>
+          <li><button class="b-ripple">Home</button></li>
+          <li><button class="b-ripple">About</button></li>
+          <li><button class="b-ripple">Profile</button></li>
+          <li><button class="b-ripple">Chat</button></li>
       </ul>
     </div>
   </nav>
   <div class="under-nav"></div>
   <div class="feed-title">News</div>
   <div class="hide" id="profile-block-hide">
-    <div class="form-arrow" id="back-button"  onclick="back()"><button><i class="fas fa-arrow-left"></i></button></i></div>
+    
   </div>
   <div class="card">
     <div class="card-image">
@@ -88,7 +90,7 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
   </div>
 
   <script>
-    var buttons = document.getElementsByTagName('button');
+    var buttons = document.getElementsByClassName('b-ripple');
 
 Array.prototype.forEach.call(buttons, function(b){
   b.addEventListener('click', createRipple);
@@ -117,35 +119,54 @@ function createRipple(e)
   <script>
     function profile() {
     
-    var NAME = document.getElementById("profile-block-hide")
-    
-    NAME.className="profile-block-show"
+    anim = $("#anim")
 
-    var NAME = document.getElementById("blur")
-    
-    NAME.className="blur"
+    if (anim.hasClass("anim")) {
+      anim.removeClass("anim");
+    } else {
+      anim.addClass("anim");
+    }
 
-    var NAME = document.getElementById("body")
+    fixed = $("#profile-block-hide")
+
+    if (fixed.hasClass("hide")) {
+      fixed.removeClass("hide");
+    } else {
+      fixed.addClass("hide");
+    }
+
+    fixed = $("#profile-block-hide")
+
+    if (fixed.hasClass("profile-block-show")) {
+      fixed.removeClass("profile-block-show");
+    } else {
+      fixed.addClass("profile-block-show");
+    }
+
+    fixed = $("#blur")
+
+    if (fixed.hasClass("hide")) {
+      fixed.removeClass("hide");
+    } else {
+      fixed.addClass("hide");
+    }
     
-    NAME.className="fixed"
+    fixed = $("#blur")
+
+    if (fixed.hasClass("blur")) {
+      fixed.removeClass("blur");
+    } else {
+      fixed.addClass("blur");
+    }
+    
+    fixed = $("body")
+
+    if (fixed.hasClass("fixed")) {
+      fixed.removeClass("fixed");
+    } else {
+      fixed.addClass("fixed");
+    }
     } 
-</script>
-
-<script>
-  function back() {
-  
-  var NAME = document.getElementById("profile-block-hide")
-  
-  NAME.className="hide"
-  var NAME = document.getElementById("blur")
-    
-  NAME.className="hide"
-
-  var NAME = document.getElementById("body")
-    
-  NAME.className="body"
-
-  } 
 </script>
 
   <script>
