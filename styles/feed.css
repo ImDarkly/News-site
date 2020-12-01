@@ -2,6 +2,7 @@ body{
     background-color: #141E27;
     margin: 0;
     transition: visibility 0s, opacity 0.2s linear;
+    font-family: 'Roboto', sans-serif;
     
 }
 button {
@@ -37,7 +38,7 @@ button .ripple{
   }
 * {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 .nav-title{
@@ -89,7 +90,7 @@ nav ul {
 }
 nav ul.active {
     clip-path: circle(100% at -45% 10%);
-    transition: all 0.4s ease-in-out;1
+    transition: all 0.4s ease-in-out;
    
 }
 
@@ -333,6 +334,7 @@ box-shadow: inset 0px -50px 50px 50px rgba(0,0,0,0.7);
 }
 #profile-block-hide{
     position: fixed;
+    transition: visibility 0s, opacity 0.2s linear;
 }
 .profile-block-show{
     visibility: visible;
@@ -352,7 +354,6 @@ box-shadow: inset 0px -50px 50px 50px rgba(0,0,0,0.7);
 }
 .profile-block-show button{
     color:  #DADCDE;
-    margin: 20px 10px;
     font-size: 36px;
     background: transparent;
     border: none;
@@ -400,7 +401,7 @@ nav .menu-top .nav-profile span.elipse {
     transition: all 0.4s ease-in-out;
     z-index: 3;
 }
-nav .menu-top .nav-profile.anim span.round{
+nav .menu-top .nav-profile.anim span.round {
     width: 30px;
     height: 6px;
     border-radius: 4px;
@@ -408,11 +409,156 @@ nav .menu-top .nav-profile.anim span.round{
     top: 28px;
     transform: rotate(135deg);
 }
-nav .menu-top .nav-profile.anim span.elipse{
+nav .menu-top .nav-profile.anim span.elipse {
     width: 30px;
     height: 6px;
     border-radius: 4px;
     left: 15px;
     top: 28px;
     transform: rotate(45deg);
+}
+.profile-logo img{
+    position: absolute;
+    left:  33%;
+    top: 5%;
+    width: 120px;
+    clip-path: circle(50%);
+}
+.gear-button{
+    position: absolute;
+    right: 5%;
+    top: 1%;
+    height: 56px;
+    width: 56px;
+    padding: 10px;
+}
+.gear-button button{
+    margin: auto;
+    position: relative;
+    border-radius: 50%;
+    height: 56px;
+    width: 56px;
+    padding: 0;
+    transition: none;
+    
+}
+.gear-button button:hover{
+    transform: rotate(-45deg);
+    transition: all 0.4s;
+}
+.user-nickname{
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+    color: #DADCDE;
+    margin-top: 148px;
+}
+.user-tag{
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 6px;
+    color: rgba(218, 220, 222, 0.5);
+}
+.profile-info{
+    position: absolute;
+    top: 232px;
+    left: 10%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+.following-number{
+    color: #DADCDE;
+}
+.following-text{
+    color: rgba(218, 220, 222, 0.5);
+
+}
+.following{
+    position: absolute;
+}
+.followers{
+    position: absolute;
+    left: 106px;
+}
+.followers-number{
+    color: #DADCDE;
+}
+.follower-text{
+    color: rgba(218, 220, 222, 0.5);
+
+}
+.posts{
+    position: absolute;
+    left: 212px;
+}
+.posts-number{
+    color: #DADCDE;
+}
+.posts-text{
+    color: rgba(218, 220, 222, 0.5);
+
+}
+.bio{
+    padding: 36px;
+    color: #DADCDE;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 48px;
+}
+.website a{
+    position: absolute;
+    left: 10%;
+    font-weight: 900;
+    font-size: 16px;
+    color: #7633B7;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.edit-button{
+    position: absolute;
+    text-align: center;
+    font-weight: 700;
+    bottom: 7%;
+    width: 109px;
+    height: 30px;
+    left: 10%;
+    color: #DADCDE;
+    background-color: #7633B7;
+    box-shadow: 0px 4px 20px 5px rgba(118, 51, 183, 0.25);
+    border-radius: 50px;
+}
+.edit-button button{
+    position: absolute;
+    font-size: 16px;
+    margin: auto;
+    bottom: 15%;
+    left: 10%;
+}
+.posts-button{
+    position: absolute;
+    text-align: center;
+    font-weight: 700;
+    bottom: 7%;
+    width: 109px;
+    height: 30px;
+    right: 10%;
+    
+    background-color: #7633B7;
+    box-shadow: 0px 4px 20px 5px rgba(118, 51, 183, 0.25);
+    border-radius: 50px;
+}
+.posts-button button{
+    position: absolute;
+    font-size: 16px;
+    margin: auto;
+    bottom: 15%;
+    right: 25%;
+}
+.posts-button a{
+    color: #DADCDE;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 }
