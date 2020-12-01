@@ -108,39 +108,22 @@ body{
 }
 
 .blur{
-  backdrop-filter: brightness(60%);
-  z-index: -1;
+    backdrop-filter: blur(10px);
 }
 .form{
     visibility: visible;
     opacity: 1;
-    position: relative;
+    position: absolute;
     width: 324px;
     height: 524px;
     top: 50%;
     left: 45%;
     transform: translate(-44%, -50%);
-    background: inherit;
+    background: #202D3D;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     border-radius: 30px;
     font-family: 'Roboto', sans-serif;
-    transition: visibility 0s, opacity 0.5s linear; 
-    overflow: hidden;
-    z-index: 3;
-}
-.form:after{
-  
- content: '';
- width: 300px;
- height: 300px;
- background: inherit; 
- position: absolute;
- left: -25px;
- right: 0;
- top: -25px;  
- bottom: 0;
- box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
- filter: blur(10px);
+    transition: visibility 0s, opacity 0.5s linear;
 }
 .show{
     opacity: 1;
@@ -369,4 +352,3 @@ span.ripple {
     .form input:invalid {
       box-shadow: none;
     }
-    
