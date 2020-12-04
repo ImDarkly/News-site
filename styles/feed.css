@@ -85,7 +85,7 @@ nav ul {
 }
 .menu-top {
     width: 100vw;
-    height: 8vh;
+    height: 64px;
     background-color: #202D3D;
 }
 nav ul.active {
@@ -583,6 +583,7 @@ nav .menu-top .nav-profile.anim span.elipse {
     }
     .menu-top{
         text-align: center;
+        height: 76px;
 
     }
     .menu{

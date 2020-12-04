@@ -380,13 +380,54 @@ span.ripple {
     margin: 0;
     }
     .title{
+      position: absolute;
+      left: 55%;
       top: 20%;
     }
     .google-button, .email-button, .guest-button{
       left: 50%;
-      width: 400px;
+      width: 320px;
     }
     .form{
       left: 50%;
     }
   }
+  @media only screen and (max-height: 400px) {
+    #background {
+      position: absolute;
+      left: 50%;
+      top: 96px;
+    }
+    .google-button{
+      position: absolute;
+      top: 112px;
+    }
+    .email-button{
+      position: absolute;
+      top: 186px;
+    }
+    .guest-button{
+      position: absolute;
+      top: 240px;
+    }
+    .form{
+      height: 350px;
+      top: 45%;
+    }
+    .welcome{
+      display: none;
+    }
+    .information{
+      display: none;
+    }
+    .profile-logo{
+      margin-top: -120px;
+    }
+    .username{
+      margin-top: 0px;
+    }
+    .form-foot{
+      display: none;
+    }
+  }
+ /* jnfdnfgn */ 
