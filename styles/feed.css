@@ -177,8 +177,8 @@ nav ul li button{
 .card{
     vertical-align: middle;
     position: relative;
-    width: 75vw;
-    height: 75vw;
+    width: 280px;
+    height: 280px;
     margin: 60px auto 0 auto;
     overflow: hidden;
     border-radius: 20%;
@@ -186,8 +186,8 @@ nav ul li button{
 }
 .card-image {
     position: relative;
-    width: 75vw;
-    height: 75vw;
+    width: 280px;
+    height: 280px;
     margin: auto;
     border-radius: 20%;
     text-align: center;
@@ -532,10 +532,12 @@ nav .menu-top .nav-profile.anim span.elipse {
 }
 .edit-button button{
     position: absolute;
+    width: 109px;
+    height: 30px;
     font-size: 16px;
     margin: auto;
-    bottom: 15%;
-    left: 10%;
+    left: 0%;
+    border-radius: 50px;
 }
 .posts-button{
     position: absolute;
@@ -561,4 +563,61 @@ nav .menu-top .nav-profile.anim span.elipse {
     color: #DADCDE;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+
+
+
+
+@media only screen and (min-width: 600px){
+    
+    nav ul {
+        clip-path: none;
+        display: inline;
+        width: 100vw;
+        height: 8vh;
+    }
+    .menu-top{
+        text-align: center;
+
+    }
+    .menu{
+        display: none;
+    }
+    nav ul li button{
+        width: 100%;
+        font-weight: 700;
+        text-transform: none;
+        transition: all 0.8s;
+        margin: auto;
+        font-size: 2em;
+        padding: 21px 16px;
+    }
+    nav ul li{
+        display: inline-block;
+        margin: 0 -3px;
+    }
+    .nav-title{
+        margin: auto;
+        left: 25px;
+    }
+    .nav-profile{
+        margin: 10px 0;
+        right: 25px;
+    }
+    .profile-block-show{
+        left: 49%;
+    }
+    .card{
+        width: 400px;
+        height: 400px;
+    }
+    .card-image{
+        width: 400px;
+        height: 400px;
+    }
 }

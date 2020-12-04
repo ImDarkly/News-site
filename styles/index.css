@@ -1,5 +1,5 @@
 body{
-  background:  linear-gradient(180.09deg, #000000 5.27%, rgba(60, 14, 153, 0) 19.02%, #250F4F 67.96%), url(background.jpg);
+  background: url(background.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -55,6 +55,7 @@ body{
 .google-button a{
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
+  color: #232136;
 }
 .email-button{
   top: 85%;
@@ -214,21 +215,37 @@ hr{
   margin-left: 265px;
   color:  #DADCDE;
 }
+.login-shadow{
+  position: absolute;
+  background: #6a3093;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a044ff, #6a3093);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a044ff, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 50px;
+  margin: 10px 38px;
+  height: 50px;
+  bottom: -11px;
+  filter: blur(20px);
+}
 .login-button{
+  bottom: 72px;
+  position: absolute;
   text-align: center;
   font-size: 36px;
-  background: #7633B7;
-  box-shadow: 0px 4px 20px 5px rgba(118, 51, 183, 0.25);
+  background: #6a3093;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a044ff, #6a3093);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a044ff, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-radius: 50px;
   margin: 35px 40px;
   padding: 2px;
 }
 .login-button a{
-  color: #DADCDE;
+  color:  #DADCDE;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
 .form-foot{
+  bottom: 80px;
+  position: absolute;
   text-align: center;
   color:  #DADCDE;
 }
@@ -351,4 +368,25 @@ span.ripple {
   
   .form input:invalid {
     box-shadow: none;
+  }
+  @media only screen and (min-width: 600px) {
+    body{
+      background: url(pc-background.jpg);
+      -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    }
+    .title{
+      top: 20%;
+    }
+    .google-button, .email-button, .guest-button{
+      left: 50%;
+      width: 400px;
+    }
+    .form{
+      left: 50%;
+    }
   }
