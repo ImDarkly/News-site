@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News site</title>
+    <script src="script/jquery-3.5.1.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
 integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
@@ -40,6 +41,7 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
         <div class="login-button"><a href="feed.html">Login</a></div>
         <div class="form-foot"><p>Don’t have account?<a href="index.html">Sign up</a></p></div>
     </div>
+    <div class="hide" id="whitemode"><button onclick="changemode()"><i class="fas fa-sun"></i></button></div>
     <script>
         function changeclass() {
         
@@ -54,6 +56,10 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
         var NAME = document.getElementById("form")
         
         NAME.className="form"
+
+        var NAME = document.getElementById("whitemode")
+        
+        NAME.className="whitemode-button"
         } 
     </script>
     
@@ -71,8 +77,26 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
         var NAME = document.getElementById("body")
         
         NAME.className="show"
+
+        var NAME = document.getElementById("whitemode")
+        
+        NAME.className="hide"
         }
     </script>
+
+    <script>
+      function changemode() {
+
+      anim = $("#form")
+
+      if (anim.hasClass("white-mode")) {
+        anim.removeClass("white-mode");
+      } else {
+        anim.addClass("white-mode");
+      }
+      }
+    </script>
+
     <script>
         let box = document.getElementById('form'),
             btn = document.getElementById('hide-button');

@@ -120,7 +120,8 @@ body{
   top: 50%;
   left: 45%;
   transform: translate(-44%, -50%);
-  background: #202D3D;
+  background-color: rgba(255, 255, 255, .25);  
+  backdrop-filter: blur(50px);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   border-radius: 30px;
   font-family: 'Roboto', sans-serif;
@@ -380,6 +381,7 @@ span.ripple {
     margin: 0;
     }
     .title{
+      position: absolute;
       left: 50%;
       top: 20%;
     }
@@ -429,30 +431,3 @@ span.ripple {
       display: none;
     }
   }
-.white-mode{
-  visibility: visible;
-  opacity: 1;
-  position: absolute;
-  width: 324px;
-  height: 524px;
-  top: 50%;
-  left: 45%;
-  transform: translate(-44%, -50%);
-  background-color: rgba(255, 255, 255, .25);  
-  backdrop-filter: blur(50px);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 30px;
-  font-family: 'Roboto', sans-serif;
-  transition: visibility 0s, opacity 0.5s linear;
-}
-#whitemode button{
-  top: 25%;
-  right: 10%;
-  position: absolute;
-  background: transparent;
-  font-size: 32px;
-  color: #DADCDE;
-  border: none;
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
-}
