@@ -2,44 +2,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <link rel="stylesheet" href="styles/index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark.ly</title>
-    <link rel="stylesheet" href="styles/navbar.css">
+    <title>News site</title>
+    <script src="script/jquery-3.5.1.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
 integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
-<nav class="navbar" id="js-nav">
-    <a href="/" class="logo white">Dark<span class="violet">.ly</a></span>
-    <ul class="main-nav"  id="js-menu">
-        <li><a class="nav-links" href="/">Home</a></li>
-        <li><a class="nav-links"  href="/">News</a></li>    
-        <li><a class="nav-links"  href="/login.html">Login</a>
-        </li>
-    </ul>
-    <span class="navbar-toggle" id="js-navbar-toggle" >
-        <i class="fas fa-bars"></i>
-    </span>
-</nav>
-    <script  type="text/javascript">
-        let mainNav = document.getElementById('js-menu');
-        let navBarToggle = document.getElementById('js-navbar-toggle');
-        
-        navBarToggle.addEventListener('click', function () {
-            
-            mainNav.classList.toggle('active');
-        });</script>
-    <script  type="text/javascript">
-        let parentNav = document.getElementById('js-nav');
-        let navBarTog = document.getElementById('js-navbar-toggle');
-        
-        navBarTog.addEventListener('click', function () {
-            
-            parentNav.classList.toggle('clicked');
-        });</script>    
+<body id="body">
+    <div id="background">
+        <div class="title">
+            <p class="small-title">welcome to</p>
+            <p class="logo">Title</p>
+        </div>
+        <div><button class="google-button" ><a href="#">Continue with Google</a></button></div>
+        <div class="email" id="hide-button" onclick="changeclass()"><button class="email-button" >Continue with email</button></div>
+        <div ><button class="guest-button"><a href="news.html">Continue as guest</a></button></div>
+    </div>
+    <div id="form" class="hide">
+        <div class="form-arrow" id="back-button"  onclick="changeclass2()"><button class="form-arrow"><i class="fas fa-arrow-left"></i></button></div>
+        <div class="profile-logo"><i class="far fa-user-circle"></i></div>
+        <div class="welcome"><p>Welcome back!</p></div>
+        <div class="information"><p>Login into our existing DarkLy account</p></div>
+        <div class="username">
+          <div class="input-animated" autocomplete="off">
+            <input autocomplete="off" type="text" id="name" required pattern="\S+.*" placeholder="the placeholder"/>
+            <label htmlFor="name" class="label-name"><span class="content-name">Name</span></label>
+        </div>
+          <div class="input-animated" autocomplete="off">
+          <input autocomplete="off" type="text" id="password" required pattern="\S+.*" placeholder="the placeholder2"/>
+          <label htmlFor="name" class="label-name"><span class="content-name">Password</span></label>  
+        </div>
+      </div>
+        <div class="login-shadow"></div>
+        <div class="login-button"><a href="feed.html">Login</a></div>
+        <div class="form-foot"><p>Don’t have account?<a href="index.html">Sign up</a></p></div>
+    </div>
     
+    <script>
+        function changeclass() {
+        
+        var NAME = document.getElementById("background")
+        
+        NAME.className="hide"
+        
+        var NAME = document.getElementById("body")
+        
+        NAME.className="blur"
+
+        var NAME = document.getElementById("form")
+        
+        NAME.className="form"
+
+        var NAME = document.getElementById("whitemode")
+        
+        NAME.className="whitemode-button"
+        } 
+    </script>
+    
+    <script>
+        function changeclass2() {
+        
+        var NAME = document.getElementById("background")
+        
+        NAME.className="show"
+        
+        var NAME = document.getElementById("form")
+        
+        NAME.className="hide"
+
+        var NAME = document.getElementById("body")
+        
+        NAME.className="show"
+
+        var NAME = document.getElementById("whitemode")
+        
+        NAME.className="hide"
+        }
+    </script>
+
+    <script>
+      function changemode() {
+
+      anim = $("#form")
+
+      if (anim.hasClass("white-mode")) {
+        anim.removeClass("white-mode");
+      } else {
+        anim.addClass("white-mode");
+      }
+      }
+    </script>
+
+    <script>
+        let box = document.getElementById('form'),
+            btn = document.getElementById('hide-button');
+
+btn.addEventListener('click', function changeclass() {
+  
+  if (box.classList.contains('hide')) {
+    box.classList.remove('hide');
+    setTimeout(function () {
+      box.classList.remove('form');
+    }, 20);
+  } else {
+    box.classList.add('form');    
+    box.addEventListener('transitionend', function(e) {
+      box.classList.add('hide');
+    }, {
+      capture: false,
+      once: true,
+      passive: false
+    });
+  }
+  
+}, false);
+
+    </script>
+   
 </body>
 </html>
