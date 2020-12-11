@@ -1,0 +1,142 @@
+
+body{
+    background: #121212;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar{
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: 8%;
+    display: flex;
+    z-index: 100;
+    background: #202020;
+    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 85px;
+}
+nav img{
+    top: 0;
+    border-radius: 50%;
+    width: 15%;
+    object-fit: contain;
+}
+nav .logo{
+    font-style: normal;
+    font-weight: bold;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    font-size: 2em;
+    left: 5px;
+}
+.white{
+    color: white;
+}
+.violet{
+    color: #8D56D0;
+    left: 80px;
+}
+.navbar  ul{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.navbar  ul li {
+    position: relative;
+    list-style: none;
+}
+.navbar-toggle{
+    top: 5px;
+    right: 0px;
+    position: absolute;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 2em;
+    color: white;
+    margin-right: 20px;
+}
+nav ul li a{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    
+}
+nav ul li a:hover{
+    color: rgb(207, 207, 207);
+    transition: 0.4s;
+}
+.logo:hover{
+    color: rgb(207, 207, 207);
+    transition: 0.4s;
+}
+@media screen and (max-width: 860px){
+    .main-nav {
+        list-style-type: none;
+    }
+    .main-nav {
+        list-style-type: none;
+        display: none;
+        transition: 0.6s;
+    }
+    .active  {
+            display: block;
+    }
+    .clicked{
+        height: 28%;
+        border-radius: 25px;
+    }
+    .clicked ul li{
+        font-style: normal;
+        top: 20px;
+        margin-top: 10px;
+        margin-left: -180px;
+        font-weight: bold;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-size: 1.5em;
+    }
+    .white{
+        margin-top: 5px;
+        margin-left: 45px;
+    }
+    .violet{
+        margin-top: 5px;
+    }
+    nav img{
+        position: absolute;
+    }
+    nav .logo{
+        margin: 5px 30px;
+    }
+    
+           
+}
+@media screen and (min-width: 860px){
+    .navbar-toggle{
+        display: none;
+    }
+    nav img{
+        width: 7%;
+    }
+    nav .logo{
+        font-size: 3em;
+        margin: auto 60px;
+
+    }
+    .violet{
+        left: 160px;
+    }
+    nav ul li{
+        display: inline;
+        position: relative;
+        font-size: 2em;
+    }
+    nav ul {
+        margin-top: 1%;
+    }
+    nav{
+        justify-content: space-between;
+    }
+
+}

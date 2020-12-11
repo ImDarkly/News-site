@@ -1,0 +1,125 @@
+b{
+    height: 150vh;
+}
+form{
+    background: #202020;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 320px;
+    height: 570px;
+    top: 55%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    text-align: center;
+}
+input{
+    outline: none;
+    border: none;
+    background: #121212;
+    box-shadow: inset 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 185px;
+    font-size: 32px;
+    width: 200px;
+    padding: 0 10px;
+    color: white;
+}
+input:focus{
+    box-shadow: inset 0px 4px 4px 2px #000000;
+}
+input:hover{
+    box-shadow: inset 0px 4px 4px 2px #000000;
+    transition: 0.4s;
+}
+button{
+    color: #FFFFFF;
+    position: static;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 185px;
+    width: 200px;
+    padding: 0 10px;
+    padding: 0 10px;
+    background: #643B98;
+    outline: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font: 32px 'Montserrat', sans-serif;
+    border: none;
+    transition: 0.6s;
+}
+button:hover{
+    background: #8355b8;
+    color: #ddc7f5;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+.link{
+    outline: none;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 0 10px;
+    outline: none;
+    letter-spacing: 1px;
+    text-transform: none;
+    font: 32px 'Montserrat', sans-serif;
+    color: white;
+    text-decoration: none;
+    
+}
+.link:hover{
+    color: rgb(207, 207, 207);
+    transition: 0.4s;
+}
+
+img{
+    width: 150px;
+}
+
+.error{
+    text-transform: lowercase;
+    text-align: center;
+    align-items: center;
+
+}
+.fa-user{
+    margin-top: -60px;
+    font-size: 228px;
+    color: white;
+}
+strong{
+    font: 32px'Montserrat', sans-serif;
+    color: white;
+}
+.violet:hover{
+    color: #7547ad;
+    transition: 0.4s;
+}
+@media screen and (max-width: 860px){
+    input{
+        font-size: 16px;
+        width: 100px;
+    }
+    strong{
+        font-size: 16px;
+    }
+    .fa-user{
+        font-size: 144px;
+        margin-top: -40px;
+    }
+    .link{
+        font-size: 16px;
+    }
+    form{
+        width: 220px;
+        height: 380px;
+    }
+    button{
+        font-size: 16px;
+        width: 100px;
+    }
+}
