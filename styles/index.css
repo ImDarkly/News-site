@@ -115,7 +115,7 @@ body{
   transition: visibility 3s, opacity 3s linear;
 }
 .form{
-  position: absolute;
+  position: fixed;
   width: 324px;
   height: 524px;
   top: 50%;
