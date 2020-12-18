@@ -7,15 +7,18 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
 integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/feed.css">
-    </script>
     <script src="script/jquery-3.5.1.js"></script>
+    <script src="script/hammer.min.js"></script>
 </head>
 <body id="body">
   <div class="hide" id="blur"></div>
   <nav>
     <div class="menu-top">
       <div class="nav-title">Site</div>
-      <div class="nav-profile"><button class="ripple" onclick="profile()"><i class="fas fa-user-circle"></i></button></div>
+      <div class="nav-profile" id="anim"><button class="ripple" onclick="profile()">
+      <span class="round"></span>
+      <span class="elipse"></span>
+      </button></div>
       <ul>
         <div class="menu">
           <span></span>
@@ -23,18 +26,90 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
           <span></span>
           <button class="ripple"></button>
         </div>
-          <li><button>Home</button></li>
-          <li><button>About</button></li>
-          <li><button>Profile</button></li>
-          <li><button>Chat</button></li>
+          <li><button class="b-ripple">Home</button></li>
+          <li><button class="b-ripple">About</button></li>
+          <li><button class="b-ripple">Profile</button></li>
+          <li><button class="b-ripple">Chat</button></li>
       </ul>
     </div>
   </nav>
   <div class="under-nav"></div>
   <div class="feed-title">News</div>
   <div class="hide" id="profile-block-hide">
-    <div class="form-arrow" id="back-button"  onclick="back()"><button><i class="fas fa-arrow-left"></i></button></i></div>
+    <div class="profile-logo"><img src="gallery/Profile.png" alt=""></div>
+    <div  class="gear-button"><button class="ripple"><i class="fas fa-cog"></i></button></div>
+    <div class="user-nickname">User Nickname</div>
+    <div class="user-tag">@usertag</div>
+    <div class="profile-info">
+      <div class="following">
+        <div class="following-number">64</div>
+        <div class="following-text">following</div>
+      </div>
+      <div class="followers">
+        <div class="followers-number">12</div>
+        <div class="follower-text">followers</div>
+      </div>
+      <div class="posts">
+        <div class="posts-number">14</div>
+        <div class="posts-text">posts</div>
+      </div>
+    </div>
+    <div class="bio">Comment text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+    <div class="website"><a href="#">www.yoursite.com</a></div>
+    <div class="profile-buttons">
+      <div class="edit-button"><button  class="b-ripple">Edit profile</button></div>
+      <div class="posts-button"><button><a href="#">Posts</a></button></div>
+    </div>
   </div>
+   <div class="hide-scroller" id="comment-scroller">
+    <div class="swipe-bar " id="swipe-wrap">
+      <div class="top-swipe">
+        <div class="swipe-item">
+          <div class="swipe-item-left">
+            <div class="item-title">
+              Кроссовки женские Michael Kors 43T9CSFS2D
+            </div>
+            <div class="item-art">
+              Арт. 65YU-X64-646
+            </div>
+          </div>
+          <div class="swipe-item-right">
+            <div class="price-title">
+              Цена:
+            </div>
+            <div class="price-num">
+              125$
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-swiper">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem placeat odio dolorum recusandae consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem placeat odio dolorum recusandae consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem placeat odio dolorum recusandae consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem placeat odio dolorum recusandae consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem placeat odio dolorum recusandae consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem placeat odio dolorum recusandae consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem placeat odio dolorum recusandae consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem placeat odio dolorum recusandae consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem placeat odio dolorum recusandae consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem placeat odio dolorum recusandae consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem placeat odio dolorum recusandae consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem placeat odio dolorum recusandae consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem placeat odio dolorum recusandae consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem placeat odio dolorum recusandae consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem placeat odio dolorum recusandae consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem placeat odio dolorum recusandae consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem placeat odio dolorum recusandae consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem placeat odio dolorum recusandae consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem placeat odio dolorum recusandae consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem placeat odio dolorum recusandae consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quidem placeat odio dolorum recusandae consequuntur, quae dolores laborum aut aperiam reprehenderit iusto natus illum fuga aliquam neque aliquid distinctio magnam.
+      </div>
+      </div>
+    </div>
+   </div>
   <div class="card">
     <div class="card-image">
       <img src="https://picsum.photos/400/400" alt="" >
@@ -43,124 +118,55 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
     <div class="save-button"><button class="ripple" onclick="save()"><i class="far fa-bookmark"></i></button></div>
     <div class="solid-save"  id="solid"><button class="ripple"><i class="fas fa-bookmark"></i></button></div>
     <div class="card-title">Nasa</div>
-      <div class="comment-button"><button  class="ripple"><i class="far fa-comment"></i></button></div>
+      <div class="comment-button"><button onclick="comment()" class="ripple"><i class="far fa-comment"></i></button></div>
       <div class="like-button"><button><i class="far fa-heart"></i></button></div>
       <div class="card-description">This illustration shows the hot, dense, expanding cloud of debris stripped from neutron stars just before they collided.</div>
   </div>
 
-  <div class="card">
-    <div class="card-image">
-      <img src="https://picsum.photos/600/400" alt="" >
+  <div class="main-feed" id="main-feed">
+    <div class="card">
+      <div class="card-image">
+        <img src="https://picsum.photos/600/400" alt="" >
+      </div>
+      <div class="settings-button"><button class="ripple"><i class="fas fa-ellipsis-v"></i></button></i></div>
+      <div class="save-button"><button class="ripple" onclick="save()"><i class="far fa-bookmark"></i></button></div>
+      <div class="solid-save"  id="solid"><button class="ripple"><i class="fas fa-bookmark"></i></button></div>
+      <div class="card-title">Nasa</div>
+        <div class="comment-button"><button  class="ripple"><i class="far fa-comment"></i></button></div>
+        <div class="like-button"><button><i class="far fa-heart"></i></button></div>
+        <div class="card-description">This illustration shows the hot, dense, expanding cloud of debris stripped from neutron stars just before they collided.</div>
     </div>
-    <div class="settings-button"><button class="ripple"><i class="fas fa-ellipsis-v"></i></button></i></div>
-    <div class="save-button"><button class="ripple" onclick="save()"><i class="far fa-bookmark"></i></button></div>
-    <div class="solid-save"  id="solid"><button class="ripple"><i class="fas fa-bookmark"></i></button></div>
-    <div class="card-title">Nasa</div>
-      <div class="comment-button"><button  class="ripple"><i class="far fa-comment"></i></button></div>
-      <div class="like-button"><button><i class="far fa-heart"></i></button></div>
-      <div class="card-description">This illustration shows the hot, dense, expanding cloud of debris stripped from neutron stars just before they collided.</div>
-  </div>
-
-  <div class="card">
-    <div class="card-image">
-      <img src="https://picsum.photos/400/600" alt="" >
+  
+    <div class="card">
+      <div class="card-image">
+        <img src="https://picsum.photos/400/600" alt="" >
+      </div>
+      <div class="settings-button"><button class="ripple"><i class="fas fa-ellipsis-v"></i></button></i></div>
+      <div class="save-button"><button class="ripple" onclick="save()"><i class="far fa-bookmark"></i></button></div>
+      <div class="solid-save"  id="solid"><button class="ripple"><i class="fas fa-bookmark"></i></button></div>
+      <div class="card-title">Nasa</div>
+        <div class="comment-button"><button  class="ripple"><i class="far fa-comment"></i></button></div>
+        <div class="like-button"><button><i class="far fa-heart"></i></button></div>
+        <div class="card-description">This illustration shows the hot, dense, expanding cloud of debris stripped from neutron stars just before they collided.</div>
     </div>
-    <div class="settings-button"><button class="ripple"><i class="fas fa-ellipsis-v"></i></button></i></div>
-    <div class="save-button"><button class="ripple" onclick="save()"><i class="far fa-bookmark"></i></button></div>
-    <div class="solid-save"  id="solid"><button class="ripple"><i class="fas fa-bookmark"></i></button></div>
-    <div class="card-title">Nasa</div>
-      <div class="comment-button"><button  class="ripple"><i class="far fa-comment"></i></button></div>
-      <div class="like-button"><button><i class="far fa-heart"></i></button></div>
-      <div class="card-description">This illustration shows the hot, dense, expanding cloud of debris stripped from neutron stars just before they collided.</div>
-  </div>
-
-  <div class="card">
-    <div class="card-image">
-      <img src="https://picsum.photos/600/600" alt="" >
+  
+    <div class="card">
+      <div class="card-image">
+        <img src="https://picsum.photos/600/600" alt="" >
+      </div>
+      <div class="settings-button"><button class="ripple"><i class="fas fa-ellipsis-v"></i></button></i></div>
+      <div class="save-button"><button class="ripple" onclick="save()"><i class="far fa-bookmark"></i></button></div>
+      <div class="solid-save"  id="solid"><button class="ripple"><i class="fas fa-bookmark"></i></button></div>
+      <div class="card-title">Nasa</div>
+        <div class="comment-button"><button  class="ripple"><i class="far fa-comment"></i></button></div>
+        <div class="like-button"><button><i class="far fa-heart"></i></button></div>
+        <div class="card-description">This illustration shows the hot, dense, expanding cloud of debris stripped from neutron stars just before they collided.</div>
     </div>
-    <div class="settings-button"><button class="ripple"><i class="fas fa-ellipsis-v"></i></button></i></div>
-    <div class="save-button"><button class="ripple" onclick="save()"><i class="far fa-bookmark"></i></button></div>
-    <div class="solid-save"  id="solid"><button class="ripple"><i class="fas fa-bookmark"></i></button></div>
-    <div class="card-title">Nasa</div>
-      <div class="comment-button"><button  class="ripple"><i class="far fa-comment"></i></button></div>
-      <div class="like-button"><button><i class="far fa-heart"></i></button></div>
-      <div class="card-description">This illustration shows the hot, dense, expanding cloud of debris stripped from neutron stars just before they collided.</div>
   </div>
-
-  <script>
-    var buttons = document.getElementsByTagName('button');
-
-Array.prototype.forEach.call(buttons, function(b){
-  b.addEventListener('click', createRipple);
-})
-
-function createRipple(e)
-{
-  if(this.getElementsByClassName('ripple').length > 0)
-    {
-      this.removeChild(this.childNodes[1]);
-    }
   
-  var circle = document.createElement('div');
-  this.appendChild(circle);
   
-  var d = Math.max(this.clientWidth, this.clientHeight);
-  circle.style.width = circle.style.height = d + 'px';
   
-  circle.style.left = e.clientX - this.offsetLeft - d / 2 + 'px';
-  circle.style.top = e.clientY - this.offsetTop - d / 2 + 'px';
-  
-  circle.classList.add('ripple');
-}
-  </script>
-  
-  <script>
-    function profile() {
-    
-    var NAME = document.getElementById("profile-block-hide")
-    
-    NAME.className="profile-block-show"
-
-    var NAME = document.getElementById("blur")
-    
-    NAME.className="blur"
-
-    var NAME = document.getElementById("body")
-    
-    NAME.className="fixed"
-    } 
-</script>
-
-<script>
-  function back() {
-  
-  var NAME = document.getElementById("profile-block-hide")
-  
-  NAME.className="hide"
-  var NAME = document.getElementById("blur")
-    
-  NAME.className="hide"
-
-  var NAME = document.getElementById("body")
-    
-  NAME.className="body"
-
-  } 
-</script>
-
-  <script>
-    menu = $("nav ul");
-toggle = $("nav ul .menu");
-
-toggle.on("click", function() {
-    if (menu.hasClass("active")) {
-        menu.removeClass("active");
-    } else {
-        menu.addClass("active");
-    }
-});
-  </script>
-  
+  <script src="script/feed.js"></script>
   
 </body>
 </html>
