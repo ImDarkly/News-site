@@ -164,6 +164,8 @@ function hideswipeEl(elem) {
     isOpen = false;
     anim = $("#comment-scroller")
     anim.addClass("hide-scroller");
+    anim = $("body")
+    anim.removeClass("fixed");
     elem.classList.remove("show");
     elem.classList.remove("canScroll");
     elem.style.transform = 'translate3d(0, 0, 0)';
@@ -175,7 +177,7 @@ function showNow(elem) {
 
     elem.classList.remove("hide-scroller");
     elem.classList.add("show");
-    var topPos = - window.innerHeight + 450;
+    var topPos = - window.innerHeight + 250;
     elem.style.transform = 'translate3d(0,' + topPos + 'px, 0)';
     lastPosY = getTranslate3d(elem.style.transform)[1];
 }

@@ -585,29 +585,22 @@ nav .menu-top .nav-profile.anim span.elipse {
     border-radius: 30px;
     font-family: 'Roboto', sans-serif;
     transition: visibility 0s, opacity 0.2s linear;
-    z-index: 2;
+    z-index: 4;
     width: 100%;
     margin-top: 0px;
-}
-.comment-holder{
-    position: absolute;
-    visibility: visible;
-    opacity: 1;
-    height: 8px;
-    top: 3%;
-    transform: translate(-44%, 50%);
-    left: 46%;
-    background: #DADCDE;
-    border-radius: 30px;
-    z-index: 2;
-    width: 30%;
-    transition: visibility 0s, opacity 0.2s linear;
 }
 .hide-form{
     opacity: 0;
     visibility: hidden;
 }
 .comment-scroller{
+    position: fixed;
+    top: 70%;
+    left: 0%;
+    border-radius: 30px;
+    z-index: 4;
+    width: 100%;
+    transition: visibility 0s, opacity 0.2s linear;
 }
 .hide-scroller{
     position: fixed;
@@ -618,67 +611,138 @@ nav .menu-top .nav-profile.anim span.elipse {
 .fixed + .comment-form{
     position: absolute;
 }
-.tablet-phone {
-	position: absolute;
-	max-width: 812px;  
-	width: 100%;
-	border-top: 20px solid #000;
-	border-right: 20px solid #000;
-	border-left: 20px solid #000;
-	border-bottom: 50px solid #000;
-	border-radius: 20px;
-	max-height: 1068px;
-	top: 20px;
-	bottom: 20px;
-    background-color: #ccc;
+.comment-placeholder{
+    position: absolute;
+    left: 0;
+    top: 120px;
+    background: #141E27;
+    box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px 25px 0px 0px;
+    width: 100vw;
+    height: 100px;
+    z-index: 4;
 }
+.comment-placeholder-text{
+    margin: 30px;
+    font-style: italic;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    outline: none;
+  }
+.comment-placeholder-text::-webkit-input-placeholder{
+    color:  #DADCDE;
+  }
+  .comment-scroller {
+    display: block;
+    margin-top: 1rem;
+  }
+  
+  .comment-scroller div {
+    position: relative;
+  }
+  
+  input,
+  textarea {
+    background-color: transparent;
+  }
+  
+  
+  .comment-scroller .input-animated input {
+    display: block;
+    border: none;
+    padding: 1.25rem 1rem 0.75rem 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    outline: none;
+  }
+  
+  .comment-scroller .input-animated input::placeholder {
+    color: transparent;
+  }
+  
+  .comment-scroller .input-animated input,
+  .comment-scroller .input-animated label {
+    color: #dadcde7e;
+  }
+  
+  .comment-scroller .input-animated label {
+    position: absolute;
+    top: -5px;
+    width: 65%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #dadcde7e;
+  }
+  
+  
+  .comment-scroller .input-animated label::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-bottom: 0px solid#dadcde7e;
+    bottom: -2px;
+    transition: transform 0.3s ease;
+  }
+  
+  .comment-scroller .input-animated label span {
+    position: absolute;
+    bottom: .5rem;
+    bottom: 0px;
+    left: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  /* + only works for adjacent elements below the initial element */
+  .comment-scroller .input-animated input:not(:placeholder-shown) + label:after,
+  .comment-scroller textarea:not(:placeholder-shown) {
+    border-color: #8b0000;
+  }
+  
+  .comment-scroller .input-animated input:not(:placeholder-shown) + .label-name .content-name,
+  .comment-scroller .input-animated input:not(:placeholder-shown) + .label-email .content-email{
+    color: #8b0000;
+    color: transparent;
+  }
+  
+  .comment-scroller .input-animated input:valid + .label-name .content-name,
+  .comment-scroller .input-animated input:valid + .label-email .content-email{
+    color: #7633B7;
+    color: transparent;
+  }
+  
+  .comment-scroller .input-animated input:valid + label:after,
+  .comment-scroller textarea:valid  {
+    border-color: #7633B7;
+  }
+  
+  
+  .comment-scroller .input-animated input:focus + label span, 
+  .comment-scroller .input-animated input:valid + label span,
+  .comment-scroller .input-animated input:not(:placeholder-shown) + label span {
+    transform: translateY(-150%);   
+    font-size: .75rem;
+    color: transparent;
+  }
+  
+  .comment-scroller .input-animated input:focus + label:after, .comment-scroller input:valid + label:after, .comment-scroller input:not(:placeholder-shown) + label:after{
+    transform: translateX(0%);
+  }
+  
+  .comment-scroller input:invalid {
+    box-shadow: none;
+  }
+.comment-count{
+    top: 40px;
+    right: -230px;
+    color: #DADCDE;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    z-index: 3;
 
-.tablet-phone:after {
-		content: '';
-		position: absolute;
-		width: 80px;
-		height: 24px;
-		border: 1px solid #ccc;
-		bottom: -36px;
-		left: 50%;
-		margin-left: -40px;
-		border-radius: 10px;
-	}
-
-	.tablet-phone:before {
-		content: '';
-		position: absolute;
-		width: 14px;
-		height: 14px;
-		border: 1px solid #ccc;
-		top: -17px;
-		left: 50%;
-		margin-left: -7px;
-		border-radius: 10px;
-	}
-
-.tablet-screen {
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	background-image: url(https://source.unsplash.com/random);
-	background-size: cover;
-    overflow: hidden;
 }
-
-	.tablet-screen:after {
-		content: '';
-		background-color: rgba(0,0,0,0.3);
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-	}
-
-
 .swipe-bar {
 	position: absolute;
 	z-index: 2;
@@ -764,13 +828,48 @@ nav .menu-top .nav-profile.anim span.elipse {
 }
 
 .content-swiper {
-	float: left;
     width: 100%;
-	padding: 25px 20px;
 }
-
-
-
+.user-comment{
+    margin-bottom: -70px;
+}
+.comment-profile-logo{
+    color: #DADCDE;
+    max-height: 195px;
+    font-size: 36px;
+    margin-top: 0px;
+}
+.user-comment-nickname{
+    left: 40px;
+    top: -40px;
+    position: absolute;
+    font-size: 12px;
+}
+.user-comment-time{
+    color: #dadcde81;
+    font-size: 12px;
+    left: 130px;
+    top: -54px;
+}
+.user-comment-text{
+    font-size: 16px;
+    left: 40px;
+    top: -50px;
+    width: 75%;
+    font-weight: 400;
+}
+.user-comment-like{
+    top: -130px;
+    left: 290px;
+}
+.user-comment-like-img{
+    font-size: 18px;
+}
+.user-comment-like-count{
+    left: 2px;
+    font-size: 12px;
+    font-size: 400;
+}
 
 
 @media only screen and (min-width: 600px){
