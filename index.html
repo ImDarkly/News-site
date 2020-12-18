@@ -19,11 +19,11 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
             <p class="logo">Title</p>
         </div>
         <div><button class="google-button" ><a href="#">Continue with Google</a></button></div>
-        <div class="email" id="hide-button" onclick="changeclass()"><button class="email-button" >Continue with email</button></div>
+        <div class="email" id="hide-button" ><button class="email-button" >Continue with email</button></div>
         <div ><button class="guest-button"><a href="news.html">Continue as guest</a></button></div>
     </div>
-    <div id="form" class="hide">
-        <div class="form-arrow" id="back-button"  onclick="changeclass2()"><button class="form-arrow"><i class="fas fa-arrow-left"></i></button></div>
+    <div id="form" class="hide form">
+        <div class="form-arrow" id="back-button"><button class="form-arrow"><i class="fas fa-arrow-left"></i></button></div>
         <div class="profile-logo"><i class="far fa-user-circle"></i></div>
         <div class="welcome"><p>Welcome back!</p></div>
         <div class="information"><p>Login into our existing DarkLy account</p></div>
@@ -43,85 +43,28 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
     </div>
     
     <script>
-        function changeclass() {
-        
-        var NAME = document.getElementById("background")
-        
-        NAME.className="hide"
-        
-        var NAME = document.getElementById("body")
-        
-        NAME.className="blur"
-
-        var NAME = document.getElementById("form")
-        
-        NAME.className="form"
-
-        var NAME = document.getElementById("whitemode")
-        
-        NAME.className="whitemode-button"
-        } 
+              
+          $('.email-button').on('click', function() {
+          
+          $('#form').addClass('show');
+          $('#form').removeClass('hide');
+          $('#body').addClass('blur');
+          $('#background').addClass('hide');
+          $('#background').removeClass('show');
+          
+        });
     </script>
     
     <script>
-        function changeclass2() {
-        
-        var NAME = document.getElementById("background")
-        
-        NAME.className="show"
-        
-        var NAME = document.getElementById("form")
-        
-        NAME.className="hide"
-
-        var NAME = document.getElementById("body")
-        
-        NAME.className="show"
-
-        var NAME = document.getElementById("whitemode")
-        
-        NAME.className="hide"
-        }
+      $('#back-button').on('click', function() {
+          
+        $('#form').removeClass('show');
+        $('#form').addClass('hide');
+        $('#body').removeClass('blur');
+        $('#background').toggleClass('hide');
+        $('#background').addClass('show');
+          
+        });
     </script>
-
-    <script>
-      function changemode() {
-
-      anim = $("#form")
-
-      if (anim.hasClass("white-mode")) {
-        anim.removeClass("white-mode");
-      } else {
-        anim.addClass("white-mode");
-      }
-      }
-    </script>
-
-    <script>
-        let box = document.getElementById('form'),
-            btn = document.getElementById('hide-button');
-
-btn.addEventListener('click', function changeclass() {
-  
-  if (box.classList.contains('hide')) {
-    box.classList.remove('hide');
-    setTimeout(function () {
-      box.classList.remove('form');
-    }, 20);
-  } else {
-    box.classList.add('form');    
-    box.addEventListener('transitionend', function(e) {
-      box.classList.add('hide');
-    }, {
-      capture: false,
-      once: true,
-      passive: false
-    });
-  }
-  
-}, false);
-
-    </script>
-   
 </body>
 </html>

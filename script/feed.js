@@ -29,9 +29,13 @@ function createRipple(e)
     function comment(){
 
         
-    fixed = $("body")
+      fixed = $("body")
 
-    fixed.addClass("fixed");
+      if (fixed.hasClass("fixed")) {
+        fixed.removeClass("fixed");
+      } else {
+        fixed.addClass("fixed");
+      }
 
     anim = $("#hide-form")
 
@@ -51,9 +55,12 @@ function createRipple(e)
 
     anim = $("#comment-scroller")
 
-     
-        anim.removeClass("hide-scroller");
-    } 
+    if (anim.hasClass("hide-scroller")) {
+      anim.removeClass("hide-scroller");
+    } else {
+      anim.addClass("hide-scroller");
+    }
+  }
     
     anim = $("#swipe-wrap")
 
@@ -155,6 +162,8 @@ function setTranslate3dPosY(posY) {
 function hideswipeEl(elem) {
 
     isOpen = false;
+    anim = $("#comment-scroller")
+    anim.addClass("hide-scroller");
     elem.classList.remove("show");
     elem.classList.remove("canScroll");
     elem.style.transform = 'translate3d(0, 0, 0)';
@@ -172,7 +181,7 @@ function showNow(elem) {
 }
 
 function displayswipeEl(elem = swipeEl) {
-    elem.style.transform = 'translate3d(0, -100, 0)';
+    elem.style.transform = 'translate3d(0, 0, 0)';
     elem.classList.remove("hide-scroller");
 }
 
@@ -198,12 +207,12 @@ function handleDrag(ev) {
         },
         false
     )
-
     if (isOpen && !directionDown) {
-        setTranslate3dPosY(0);
+        setTranslate3dPosY(-100);
         console.log('is open');
         canSwipeUpDown = true;
         swipeEl.classList.add('canScroll');
+
     }
     else if (!canSwipeUpDown) {
         swipeEl.classList.remove('canScroll');
