@@ -106,11 +106,13 @@ body{
 .hide{
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0.5s, opacity 0.5s linear;
+  transition: visibility 0.3s, opacity 0.3s linear;
 }
-
 .blur{
   backdrop-filter: blur(10px);
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 3s, opacity 3s linear;
 }
 .form{
   position: absolute;
@@ -128,7 +130,7 @@ body{
 .show{
   visibility: visible;
   opacity: 1;
-  transition: visibility 0.5s, opacity 0.5s linear;
+  transition: visibility 0.3s, opacity 0.3s linear;
 }
 .form .form-arrow{
   color:  #DADCDE;

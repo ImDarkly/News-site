@@ -330,15 +330,18 @@ box-shadow: inset 0px -50px 50px 50px rgba(0,0,0,0.7);
 .hide{
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s, opacity 0.2s linear;
+    transition: visibility 0.3s, opacity 0.3s linear;
+}
+.show{
+    visibility: show;
+    opacity: 1;
+    transition: visibility 0.3s, opacity 0.3s linear;
 }
 #profile-block-hide{
     position: fixed;
-    transition: visibility 0s, opacity 0.2s linear;
+    transition: visibility 0.3s, opacity 0.3s linear;
 }
-.profile-block-show{
-    visibility: visible;
-    opacity: 1;
+.profile-block{
     position: absolute;
     width: 324px;
     height: 524px;
@@ -351,8 +354,9 @@ box-shadow: inset 0px -50px 50px 50px rgba(0,0,0,0.7);
     font-family: 'Roboto', sans-serif;
     transition-delay:0s;
     z-index: 2;
+    transition: visibility 0.3s, opacity 0.3s linear;
 }
-.profile-block-show button{
+.profile-block button{
     color:  #DADCDE;
     font-size: 36px;
     background: transparent;
@@ -806,7 +810,7 @@ nav .menu-top .nav-profile.anim span.elipse {
         margin: 10px 0;
         right: 25px;
     }
-    .profile-block-show{
+    .profile-block{
         left: 49%;
     }
     .card{
