@@ -265,3 +265,38 @@ $('.comment-reply-click').on('click', function() {
   
   
 });
+
+$('.settings-button-click').on('click', function() {
+          
+  $('.settings-button-div').toggleClass('hide');
+  
+  
+});
+
+$('.save-button').on('click', function() {
+          
+  $('.save-button-fill').removeClass('hide');
+  
+  
+});
+
+$('.save-button-fill').on('click', function() {
+          
+  $('.save-button-fill').addClass('hide');
+  
+  
+});
+
+$('.like-button').on('click', function() {
+          
+  $('.like-button-fill').removeClass('hide');
+  
+  
+});
+
+$('.like-button-fill').on('click', function() {
+          
+  $('.like-button-fill').addClass('hide');
+  
+  
+});

@@ -29,6 +29,48 @@ button .ripple{
     transform: scale(0);
     animation: ripple 0.6s linear;
   }
+
+  .ripple-red {
+    background-position: center;
+    transition: 0.6s;
+  }
+  .ripple-red:hover {
+    background: transparent radial-gradient(circle, transparent 1%,RGBA(118, 51, 183,0.2) 1%) center/15000%;
+  }
+  .ripple-red:active {
+    background-color: RGBA(218,220,222,0.2);
+    background-size: 100%;
+    transition: 0s;
+  }
+  button .ripple-red{
+      border-radius: 50%;
+      background-color: rgba(118, 51, 183, 0.7);
+      position: absolute;
+      transform: scale(0);
+      animation: ripple 0.6s linear;
+    }
+.like-button-fill{
+    position: absolute;
+    right: 6%;
+    bottom: 35%;
+    margin: auto;
+    transition: animation 0.2s, opacity 0.2s linear;
+    animation: scale-up-center 0.4s ease-in-out both;
+
+}
+.like-button-fill button{
+    text-align: center;
+    color: #7633B7;
+    font-size: 29px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    -webkit-tap-highlight-color: transparent;
+    width: 36px;
+    height: 36px;
+
+}
   
   @keyframes ripple{
     to{
@@ -584,7 +626,7 @@ nav .menu-top .nav-profile.anim span.elipse {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     border-radius: 30px;
     font-family: 'Roboto', sans-serif;
-    transition: visibility 0s, opacity 0.2s linear;
+    transition: visibility 0.2s, opacity 0.2s linear;
     z-index: 4;
     width: 100%;
     margin-top: 0px;
@@ -790,7 +832,6 @@ nav .menu-top .nav-profile.anim span.elipse {
 		top: 15px;
 		border-radius: 3px;
 		width: 72px;
-		height: 5px;
 		margin-left: -18px;
 	}
 
@@ -836,10 +877,18 @@ nav .menu-top .nav-profile.anim span.elipse {
     margin-bottom: -70px;
 }
 .comment-profile-logo{
-    color: #DADCDE;
-    max-height: 195px;
-    font-size: 36px;
     margin-top: 0px;
+    right: 10px;
+}
+.comment-profile-logo button{
+    color: #DADCDE;
+    font-size: 36px;
+    background: transparent;
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    
+
 }
 .user-comment-nickname{
     left: 40px;
@@ -907,7 +956,54 @@ nav .menu-top .nav-profile.anim span.elipse {
     from, to { overflow: hidden; } 
   }
 }
+.replies .comment-profile-logo{
+    right: 3px;
+}
+.replies .comment-profile-logo button{
+    color: #DADCDE;
+    font-size: 24px;
+}
 
+.settings-button-div li button{
+    text-align: left;
+    font-size: 16px;
+    color: #DADCDE;
+    background: none;
+    width: 100%;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+.settings-button-div {
+    border-radius: 0px 15px 0px 15px;
+    padding: 5px 10px;
+    left: 10px;
+    position: absolute;
+    list-style: none;
+    background-color: #202D3D;
+    z-index: 4;
+    transition: visibility 0.2s, opacity 0.2s linear;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.save-button-fill{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    transition: visibility 0.2s, opacity 0.2s linear;
+}
+.save-button-fill button{
+    text-align: center;
+    color: #DADCDE;
+    font-size: 24px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    -webkit-tap-highlight-color: transparent;
+    width: 36px;
+    height: 36px;
+
+}
 
 @media only screen and (min-width: 600px){
     
