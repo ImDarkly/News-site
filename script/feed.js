@@ -258,3 +258,10 @@ mcSwipe.add(new Hammer.Pan({
     threshold: 0
 }));
 mcSwipe.on("pan", handleDrag);
+
+$('.comment-reply-click').on('click', function() {
+          
+  $('.replies').toggleClass('show-replies');
+  
+  
+});
