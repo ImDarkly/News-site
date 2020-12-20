@@ -262,7 +262,8 @@ mcSwipe.on("pan", handleDrag);
 $('.comment-reply-click').on('click', function() {
           
   $('.replies').toggleClass('show-replies');
-  
+  $('#reply-to-comment').toggleClass('reply-to-comment');
+  $('#reply-to-comment').toggleClass('reply-to-comment-active');
   
 });
 
@@ -291,12 +292,15 @@ $('.like-button').on('click', function() {
           
   $('.like-button-fill').removeClass('hide');
   
+  $('.like-button').addClass('hide');
   
 });
 
 $('.like-button-fill').on('click', function() {
           
   $('.like-button-fill').addClass('hide');
+
+  $('.like-button').removeClass('hide');
   
   
 });

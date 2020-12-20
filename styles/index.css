@@ -252,7 +252,7 @@ hr{
   color:  #DADCDE;
 }
 .form-foot a{
-  color: #7633B7;
+  color:#915bc5;
   font-weight: bold;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
@@ -349,12 +349,12 @@ span.ripple {
   
   .form .input-animated input:valid + .label-name .content-name,
   .form .input-animated input:valid + .label-email .content-email{
-    color: #7633B7;
+    color:#915bc5;
   }
   
   .form .input-animated input:valid + label:after,
   .form textarea:valid  {
-    border-color: #7633B7;
+    border-color:#915bc5;
   }
   
   
