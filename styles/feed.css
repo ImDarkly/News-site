@@ -813,7 +813,7 @@ nav .menu-top .nav-profile.anim span.elipse {
 	float: left;
 	width: 100%;
 	position: relative;
-  min-height: 80px;
+    min-height: 80px;
     padding: 20px 20px 0;
 }
 
@@ -824,14 +824,17 @@ nav .menu-top .nav-profile.anim span.elipse {
 		background-color:  #DADCDE;
 		top: 15px;
 		border-radius: 3px;
-		width: 72px;
-		margin-left: -18px;
+        width: 72px;
+        height: 6px;
+        margin-left: -18px;
+        z-index: 4;
 	}
 
 .swipe-item {
     padding-top: 50px;
 	float: left;
-	width: 100%;
+    width: 100%;
+    z-index: 4;
 }
 
 .swipe-item-left {
@@ -874,12 +877,14 @@ nav .menu-top .nav-profile.anim span.elipse {
     right: 10px;
 }
 .comment-profile-logo button{
+    padding-top: 5px;
     color: #DADCDE;
     font-size: 36px;
     background: transparent;
     border: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
+    border-radius: 50px;
     
 
 }

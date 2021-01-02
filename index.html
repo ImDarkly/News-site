@@ -42,29 +42,30 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
         <div class="form-foot"><p>Don’t have account?<a href="index.html">Sign up</a></p></div>
     </div>
     
-    <script>
-              
-          $('.email-button').on('click', function() {
-          
-          $('#form').addClass('show');
-          $('#form').removeClass('hide');
-          $('#body').addClass('blur');
-          $('#background').addClass('hide');
-          $('#background').removeClass('show');
-          
-        });
-    </script>
     
     <script>
-      $('#back-button').on('click', function() {
-          
-        $('#form').removeClass('show');
-        $('#form').addClass('hide');
-        $('#body').removeClass('blur');
-        $('#background').toggleClass('hide');
-        $('#background').addClass('show');
-          
-        });
-    </script>
+              
+      $('.email-button').on('click', function() {
+      
+      $('#form').addClass('show');
+      $('#form').removeClass('hide');
+      $('#body').addClass('blur');
+      $('#background').addClass('hide');
+      $('#background').removeClass('show');
+      
+    });
+</script>
+
+<script>
+  $('#back-button').on('click', function() {
+      
+    $('#form').removeClass('show');
+    $('#form').addClass('hide');
+    $('#body').removeClass('blur');
+    $('#background').toggleClass('hide');
+    $('#background').addClass('show');
+      
+    });
+</script>
 </body>
 </html>
