@@ -875,6 +875,7 @@ nav .menu-top .nav-profile.anim span.elipse {
 .comment-profile-logo{
     margin-top: 0px;
     right: 10px;
+    max-height: 48px;
 }
 .comment-profile-logo button{
     padding-top: 5px;
@@ -1018,7 +1019,7 @@ nav .menu-top .nav-profile.anim span.elipse {
 .settings-button-div {
     border-radius: 0px 15px 0px 15px;
     padding: 5px 10px;
-    left: 10px;
+    left: 0px;
     position: absolute;
     list-style: none;
     background-color: #202D3D;
@@ -1058,7 +1059,31 @@ nav .menu-top .nav-profile.anim span.elipse {
 .replies .comment-content{
     top: -33px;
 }
+.profile-button-click-div{
+    position: absolute;
+    border-radius: 0px 15px 0px 15px;
+    padding: 5px 10px;
+    top: 100px;
+    left: 0px;
+    width: 30%;
+    list-style: none;
+    background-color: #202D3D;
+    z-index: 4;
+    transition: visibility 0.2s, opacity 0.2s linear;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
 
+.profile-button-click-div button{
+    padding: 10px 0;
+    text-align: left;
+    font-size: 16px;
+    color: #DADCDE;
+    background: none;
+    width: 100%;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
 @media only screen and (min-width: 600px){
     
     nav ul {
@@ -1116,5 +1141,11 @@ nav .menu-top .nav-profile.anim span.elipse {
         top: 220px;
         left: 0%;
         width: 500px;
+    }
+    .user-comment-like{
+        top:  -100px;
+    }
+    .feed-title{
+        margin-left: 39%;
     }
 }

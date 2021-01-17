@@ -20,7 +20,7 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
         </div>
         <div><button class="google-button" ><a href="#">Continue with Google</a></button></div>
         <div class="email" id="hide-button" ><button class="email-button" >Continue with email</button></div>
-        <div ><button class="guest-button"><a href="news.html">Continue as guest</a></button></div>
+        <div ><button class="guest-button"><a href="feed.html">Continue as guest</a></button></div>
     </div>
     <div id="form" class="hide form">
         <div class="form-arrow" id="back-button"><button class="form-arrow"><i class="fas fa-arrow-left"></i></button></div>
@@ -37,10 +37,37 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
           <label htmlFor="name" class="label-name"><span class="content-name">Password</span></label>  
         </div>
       </div>
+        
+        <div class="login-button"><a href="feed.html">Log in</a></div>
         <div class="login-shadow"></div>
-        <div class="login-button"><a href="feed.html">Login</a></div>
-        <div class="form-foot"><p>Don’t have account?<a href="index.html">Sign up</a></p></div>
+        <div class="form-foot"><p>Don’t have account?<button class="signup-button">Sign up</button></p></div>
     </div>
+    <div id="form-signup" class="hide form-signup">
+      <div class="form-arrow" id="back-button-signup"><button class="form-arrow"><i class="fas fa-arrow-left"></i></button></div>
+      <div class="welcome"><p>Let’s Get Started</p></div>
+      <div class="information"><p>Create new DarkLy account</p></div>
+      <div class="username">
+        <div class="input-animated" autocomplete="off">
+          <input autocomplete="off" type="text" id="name" required pattern="\S+.*" placeholder="the placeholder"/>
+          <label htmlFor="name" class="label-name"><span class="content-name">Name</span></label>
+      </div>
+        <div class="input-animated" autocomplete="off">
+        <input autocomplete="off" type="text" id="password" required pattern="\S+.*" placeholder="the placeholder2"/>
+        <label htmlFor="name" class="label-name"><span class="content-name">Email</span></label>  
+      </div>
+      <div class="input-animated" autocomplete="off">
+        <input autocomplete="off" type="text" id="name" required pattern="\S+.*" placeholder="the placeholder"/>
+        <label htmlFor="name" class="label-name"><span class="content-name">Password</span></label>
+    </div>
+      <div class="input-animated" autocomplete="off">
+      <input autocomplete="off" type="text" id="password" required pattern="\S+.*" placeholder="the placeholder2"/>
+      <label htmlFor="name" class="label-name"><span class="content-name">Confirm password</span></label>  
+    </div>
+    </div>
+      <div class="login-shadow"></div>
+      <div class="login-button"><a href="feed.html">Sign up</a></div>
+      <div class="form-foot"><p>Already have account?<button class="login-button-signup">Log in</button></p></div>
+  </div>
     <script src="script/index.js"></script>
 </body>
 </html>

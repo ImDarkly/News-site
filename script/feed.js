@@ -304,3 +304,10 @@ $('.like-button-fill').on('click', function() {
   
   
 });
+
+$('.profile-button-click').on('click', function() {
+          
+  $('.profile-button-click-div').toggleClass('hide');
+  
+  
+});

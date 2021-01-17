@@ -127,6 +127,19 @@ body{
   font-family: 'Roboto', sans-serif;
   z-index: 3;
 }
+.form-signup{
+  position: fixed;
+  width: 324px;
+  height: 524px;
+  top: 50%;
+  left: 45%;
+  transform: translate(-44%, -50%);
+  background: #202D3D;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  font-family: 'Roboto', sans-serif;
+  z-index: 3;
+}
 .show{
   visibility: visible;
   opacity: 1;
@@ -139,7 +152,16 @@ body{
   background: transparent;
   border: none;
   outline: none;
-  z-index: 2;
+  z-index: 20;
+}
+.form-signup .form-arrow{
+  color:  #DADCDE;
+  margin: 20px 10px;
+  font-size: 36px;
+  background: transparent;
+  border: none;
+  outline: none;
+  z-index: 20;
 }
 .profile-logo{
   color:  #DADCDE;
@@ -160,7 +182,29 @@ body{
   outline: none;
   font-weight: 600;
 }
+
+.form-signup .welcome{
+  color:  #DADCDE;
+  margin-top: -60px;
+  text-align: center;
+  font-size: 36px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-weight: 600;
+}
 .information{
+  top: -10px;
+  color: rgba(218, 220, 222, 0.5);
+  margin-top: -30px;
+  text-align: center;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-weight: 400;
+}
+.form-signup .information{
   color: rgba(218, 220, 222, 0.5);
   margin-top: -30px;
   text-align: center;
@@ -171,6 +215,15 @@ body{
   font-weight: 400;
 }
 .username{
+  margin: 30px;
+  font-style: italic;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+.form-signup .username{
+  top: -40px;
   margin: 30px;
   font-style: italic;
   background-color: transparent;
@@ -225,11 +278,17 @@ hr{
   border-radius: 50px;
   margin: 10px 38px;
   height: 50px;
-  bottom: -11px;
+  bottom: 85px;
   filter: blur(20px);
 }
+.login-button:hover ~ .login-shadow {
+  filter: blur(30px);
+  transition: 0.2s;
+  
+}
+
 .login-button{
-  bottom: 72px;
+  bottom: 5px;
   position: absolute;
   text-align: center;
   font-size: 36px;
@@ -239,11 +298,45 @@ hr{
   border-radius: 50px;
   margin: 35px 40px;
   padding: 2px;
+  z-index: 3;
 }
 .login-button a{
   color:  #DADCDE;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
+}
+
+.form-signup .login-button{
+  bottom: 47px;
+  position: absolute;
+  text-align: center;
+  font-size: 36px;
+  background: #6a3093;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a044ff, #6a3093);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a044ff, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 50px;
+  margin: 35px 40px;
+  padding: 2px;
+  width: 240px;
+  z-index: 3;
+}
+.form-signup .login-button a{
+  color:  #DADCDE;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.form-signup .login-shadow{
+  position: absolute;
+  background: #6a3093;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a044ff, #6a3093);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a044ff, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 50px;
+  margin: 10px 38px;
+  height: 50px;
+  bottom: 70px;
+  width: 240px;
+  filter: blur(20px);
 }
 .form-foot{
   bottom: 80px;
@@ -251,12 +344,22 @@ hr{
   text-align: center;
   color:  #DADCDE;
 }
-.form-foot a{
+.form-signup .form-foot{
+  left: 18.7%;
+  bottom: 22px;
+  position: absolute;
+  text-align: center;
+  color:  #DADCDE;
+}
+.form-foot button{
   color:#915bc5;
   font-weight: bold;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
   padding-left: 3px;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 span.ripple {
   position: absolute;
@@ -375,6 +478,104 @@ span.ripple {
   #background{
     z-index: -1;
   }
+
+  .form-signup {
+    display: block;
+    margin-top: 1rem;
+    overflow: hidden;
+  }
+  
+  .form-signup div {
+    position: relative;
+  }
+  
+  input,
+  textarea {
+    background-color: transparent;
+  }
+  
+  
+  .form-signup .input-animated input {
+    display: block;
+    border: none;
+    padding: 1.25rem 1rem 0.75rem 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    outline: none;
+  }
+  
+  .form-signup .input-animated input::placeholder {
+    color: transparent;
+  }
+  
+  .form-signup .input-animated input,
+  .form-signup .input-animated label {
+    color: #DADCDE;
+  }
+  
+  .form-signup .input-animated label {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 2px solid#DADCDE;
+  }
+  
+  
+  .form-signup .input-animated label::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid#DADCDE;
+    bottom: -2px;
+    transition: transform 0.3s ease;
+  }
+  
+  .form-signup .input-animated label span {
+    position: absolute;
+    bottom: .5rem;
+    left: 0;
+    transition: all 0.3s ease;
+  }
+  
+  /* + only works for adjacent elements below the initial element */
+  .form-signup .input-animated input:not(:placeholder-shown) + label:after,
+  .form-signup textarea:not(:placeholder-shown) {
+    border-color: #8b0000;
+  }
+  
+  .form-signup .input-animated input:not(:placeholder-shown) + .label-name .content-name,
+  .form-signup .input-animated input:not(:placeholder-shown) + .label-email .content-email{
+    color: #8b0000;
+  }
+  
+  .form-signup .input-animated input:valid + .label-name .content-name,
+  .form-signup .input-animated input:valid + .label-email .content-email{
+    color:#915bc5;
+  }
+  
+  .form-signup .input-animated input:valid + label:after,
+  .form-signup textarea:valid  {
+    border-color:#915bc5;
+  }
+  
+  
+  .form-signup .input-animated input:focus + label span, 
+  .form-signup .input-animated input:valid + label span,
+  .form-signup .input-animated input:not(:placeholder-shown) + label span {
+    transform: translateY(-150%);   
+    font-size: .75rem;
+  }
+  
+  .form-signup .input-animated input:focus + label:after, .form-signup input:valid + label:after, .form-signup input:not(:placeholder-shown) + label:after{
+    transform: translateX(0%);
+  }
+  
+  .form-signup input:invalid {
+    box-shadow: none;
+  }
   @media only screen and (min-width: 600px) {
     body{
       background: url(pc-background.jpg);
@@ -394,6 +595,9 @@ span.ripple {
       width: 320px;
     }
     .form{
+      left: 50%;
+    }
+    .form-signup{
       left: 50%;
     }
     .white-mode{
@@ -438,4 +642,7 @@ span.ripple {
     .form-foot{
       display: none;
     }
+    
+    
+    
   }
