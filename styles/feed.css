@@ -93,8 +93,8 @@ button .ripple{
 }
 .nav-profile{
     position: absolute;
-    top: 0%;
-    right: 5%;
+    top: 5%;
+    right: 16px;
 }
 .nav-profile button{
     text-align: center;
@@ -140,10 +140,9 @@ nav ul .menu{
     width: 60vw;
     height: 40px;
     position: relative;
+    padding-left: 16px;
     padding-top: 10px;
-    margin-top: 8px;
-    margin-bottom: 24px;
-    margin-left: 8px;
+    margin: 8px;
 }
 nav ul .menu button{
     margin-top: -20px;
@@ -161,18 +160,18 @@ nav ul .menu span {
     position: absolute;
     width: 30px;
     height: 6px;
-    left: 0;
+    left: 16px;
     background: #DADCDE;
     border-radius: 4px;
     transition: all 0.4s ease-in-out;
 }
 nav .menu span:nth-child(1) { 
     top: 0px;
-    left: 10px;
+    left: 26px;
 }
 nav .menu span:nth-child(2) {
     top: 10px;
-    left: 5px;
+    left: 21px;
     opacity: 0.5;
     transition: visibility 0.5s, opacity 0.5s linear;
 }
@@ -181,7 +180,7 @@ nav .menu span:nth-child(3) {
 }
 nav ul.active .menu span:nth-child(1) {
     transform: rotate(135deg);
-    left: 3px;
+    left: 19px;
     top: 8px;
 }
 nav ul.active .menu span:nth-child(2) {
@@ -189,7 +188,7 @@ nav ul.active .menu span:nth-child(2) {
 }
 nav ul.active .menu span:nth-child(3) {
     transform: rotate(45deg);
-    left: 3px;
+    left: 19px;
     top: 8px;
 }
 
