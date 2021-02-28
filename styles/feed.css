@@ -820,12 +820,12 @@ nav .menu-top .nav-profile.anim span.elipse {
 	.top-swipe:before {
 		content: '';
 		position: absolute;
-		left: 45%;
+		left: 35%;
 		background-color:  #DADCDE;
-		top: 15px;
-		border-radius: 3px;
-        width: 72px;
-        height: 6px;
+		top: 20px;
+		border-radius: 25px;
+        width: 144px;
+        height: 8px;
         margin-left: -18px;
         z-index: 4;
 	}
@@ -867,6 +867,7 @@ nav .menu-top .nav-profile.anim span.elipse {
 }
 
 .content-swiper {
+    top: 32px;
     width: 100%;
 }
 .user-comment{
@@ -875,7 +876,6 @@ nav .menu-top .nav-profile.anim span.elipse {
 .comment-profile-logo{
     margin-top: 0px;
     right: 10px;
-    max-height: 48px;
 }
 .comment-profile-logo button{
     padding-top: 5px;
@@ -1083,6 +1083,17 @@ nav .menu-top .nav-profile.anim span.elipse {
     border: none;
     -webkit-tap-highlight-color: transparent;
     outline: none;
+}
+.profile-button-click {
+    background: transparent;
+    color: #DADCDE;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    border-radius: 50px;
+    font-size: 36px;
+    text-align: center;
+
 }
 @media only screen and (min-width: 600px){
     
