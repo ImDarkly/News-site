@@ -4,9 +4,9 @@ body{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
-  
+  min-height: -webkit-fill-available;
 }
 .title{
   top: 25%;
